@@ -2,22 +2,22 @@
   "spiceblends": [
     {
       "id": 1,
-      "title": "Pumpkin Spice",
+      "title": "Pumpkin Spiciest",
       "image": "./assets/spices/pumpkinspicelatte.jpg"
     },
     {
       "id": 2,
-      "title": "Za'atar",
+      "title": "Za'atarier",
       "image": "./assets/spices/zaatar.jpg"
     },
     {
       "id": 3,
-      "title": "Garlic Pepper Salt",
+      "title": "Garlic Peppery Salt",
       "image": "./assets/spices/garlicsalt.jpg"
     },
     {
       "id": 4,
-      "title": "Five Spice",
+      "title": "The 6th Spice",
       "image": "./assets/spices/fivespice.jpg"
     }
   ],
@@ -106,6 +106,41 @@
       "name": "Pepper",
       "spiceblendId": 3,
       "id": 17
+    },
+    {
+      "name": "Starbucks",
+      "spiceblendId": 1,
+      "id": 18
+    },
+    {
+      "name": "Tar",
+      "spiceblendId": 2,
+      "id": 19
+    },
+    {
+      "name": "'za",
+      "spiceblendId": 2,
+      "id": 20
+    },
+    {
+      "name": "Peppered Garlic",
+      "spiceblendId": 3,
+      "id": 21
+    },
+    {
+      "name": "Bruce Willis Was Spice The Whole Time",
+      "spiceblendId": 4,
+      "id": 22
+    },
+    {
+      "name": "Other Spices",
+      "spiceblendId": 2,
+      "id": 23
+    },
+    {
+      "name": "Whipped cream",
+      "spiceblendId": 1,
+      "id": 24
     }
   ]
 }
