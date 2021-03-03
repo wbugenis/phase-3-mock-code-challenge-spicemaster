@@ -14,7 +14,6 @@ const ingredientForm = document.querySelector("form#ingredient-form")
 
 //Show details of spice object on webpage
 function showSingleSpice(spice){
-    
     const img = spiceDetail.querySelector("img.detail-image")
     img.src = spice.image
     img.alt = spice.title
@@ -35,7 +34,6 @@ function showSingleSpice(spice){
 
 //Fetch details for spice based on id argument and show in detail view
 function fetchSpice(id){
-    
     fetch(`${spiceUrl}/${id}`)
         .then(response => response.json())
         .then(spice => showSingleSpice(spice))
@@ -45,7 +43,8 @@ function fetchSpice(id){
 //Make images from spice object and append to spice-imgs div
 function makeSpiceImg(spice) {
     const img = document.createElement('img')
-    img.dataset.id = spice.id
+    img.dataset.id = parseInt(spice.id)
+    
     img.src = spice.image
     img.alt = spice.title
     spiceImgs.append(img)
@@ -64,7 +63,8 @@ function updateSpiceTitle(event){
     event.preventDefault()
 
     const title = event.target.title.value
-    const id = updateForm.dataset.id
+    const id = parseInt(updateForm.dataset.id)
+    console.log(id)
     
     fetch(`${spiceUrl}/${id}`, {
         method: 'PATCH',
