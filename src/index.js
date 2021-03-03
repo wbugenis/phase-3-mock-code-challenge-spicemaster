@@ -18,7 +18,7 @@ function showSingleSpice(spice){
     const img = spiceDetail.querySelector("img.detail-image")
     img.src = spice.image
     img.alt = spice.title
-    spiceTitle.innerText = ''
+
     spiceTitle.innerText = spice.title
     list.innerHTML = ''
     
@@ -35,6 +35,7 @@ function showSingleSpice(spice){
 
 //Fetch details for spice based on id argument and show in detail view
 function fetchSpice(id){
+    
     fetch(`${spiceUrl}/${id}`)
         .then(response => response.json())
         .then(spice => showSingleSpice(spice))
@@ -64,6 +65,7 @@ function updateSpiceTitle(event){
 
     const title = event.target.title.value
     const id = updateForm.dataset.id
+    
     fetch(`${spiceUrl}/${id}`, {
         method: 'PATCH',
         headers: {
@@ -73,7 +75,7 @@ function updateSpiceTitle(event){
         body: JSON.stringify({title})
     })
         .then(response => response.json())
-        .then(spice => fetchSpice(id))
+        .then(() => fetchSpice(id))
         .catch(error => console.log(error))
     updateForm.reset()
 }
@@ -93,7 +95,7 @@ function addIngredient(event){
         body: JSON.stringify({name, spiceblendId})
     })
         .then(response => response.json())
-        .then(fetchSpice(spiceblendId))
+        .then(() => fetchSpice(spiceblendId))
         .catch(error => console.log(error))
     ingredientForm.reset()
 }

@@ -2,7 +2,7 @@
   "spiceblends": [
     {
       "id": 1,
-      "title": "Pumpkin Spiciest",
+      "title": "Pumpkin Spice",
       "image": "./assets/spices/pumpkinspicelatte.jpg"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "id": 3,
-      "title": "Garlic Peppery Salt",
+      "title": "Garlic Pepper Salt",
       "image": "./assets/spices/garlicsalt.jpg"
     },
     {
